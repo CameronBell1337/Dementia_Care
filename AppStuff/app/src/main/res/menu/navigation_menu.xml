@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/purple_500"
+    android:elevation="30dp">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/_HomeMenuItem"
+            android:elevation="30dp"
+            android:icon="@drawable/ic_outline_home_24"
+            android:title="@string/home_name" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Information">
+            <menu>
+                <item
+                    android:id="@+id/_resourcesMenuItem"
+                    android:elevation="30dp"
+                    android:enabled="true"
+                    android:icon="@drawable/ic_outline_book_24"
+                    android:title="@string/resources_name" />
+                <item
+                    android:id="@+id/_contactsMenuItem"
+                    android:elevation="30dp"
+                    android:enabled="true"
+                    android:icon="@drawable/ic_outline_support_24"
+                    android:title="@string/useful_contacts_name" />
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Communication">
+            <menu>
+                <item
+                    android:id="@+id/_shareMenuItem"
+                    android:elevation="30dp"
+                    android:enabled="true"
+                    android:icon="@drawable/ic_baseline_share_24"
+                    android:title="@string/share_name" />
+            </menu>
+        </item>
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="About App">
+            <menu>
+                <item
+                    android:id="@+id/_prefMenuItem"
+                    android:elevation="30dp"
+                    android:icon="@drawable/ic_outline_more_24"
+                    android:title="@string/preferences" />
+                <item
+                    android:id="@+id/_settingMenuItem"
+                    android:elevation="30dp"
+                    android:enabled="true"
+                    android:icon="@drawable/ic_outline_settings_24"
+                    android:title="@string/setting_name" />
+                <item
+                    android:id="@+id/_helpFeedbackMenuItem"
+                    android:elevation="30dp"
+                    android:enabled="true"
+                    android:icon="@drawable/ic_baseline_help_outline_24"
+                    android:title="@string/help_name" />
+            </menu>
+        </item>
+    </group>
+</menu>
