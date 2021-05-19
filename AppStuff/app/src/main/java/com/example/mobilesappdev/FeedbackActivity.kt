@@ -18,4 +18,9 @@ class FeedbackActivity : AppCompatActivity() {
         supportActionBar!!.title = getString(R.string.help_name)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        finish()
+    }
 }

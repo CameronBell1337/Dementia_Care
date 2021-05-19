@@ -2,6 +2,7 @@ package com.example.mobilesappdev
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import android.widget.*
@@ -14,7 +15,9 @@ import androidx.drawerlayout.widget.DrawerLayout.SimpleDrawerListener
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.SnapHelper
 import com.example.mobilesappdev.adapters.RecyclerViewAdapter
 import com.example.mobilesappdev.adapters.ViewPagerAdapter
 import com.google.android.material.navigation.NavigationView
@@ -42,6 +45,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView = findViewById<NavigationView>(R.id.nav_view)
         val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id._toolbar)
+        val snapHelper : SnapHelper = LinearSnapHelper()
+
         setSupportActionBar(toolbar)
 
         navView.bringToFront()
@@ -60,13 +65,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawAnimations()
 
-
-
         layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         _recyclerView.layoutManager = layoutManager
 
         adapter = RecyclerViewAdapter()
         _recyclerView.adapter = adapter
+        snapHelper.attachToRecyclerView(_recyclerView)
     }
 
     private fun drawAnimations()
@@ -128,6 +132,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             drawerLayout.setScrimColor(resources.getColor(R.color.grey))
+
         }
         else if (prefs?.toInt() == 2)
         {

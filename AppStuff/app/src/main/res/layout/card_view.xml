@@ -5,11 +5,15 @@
     android:id="@+id/_cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
     android:clickable="true"
     android:foreground="?selectableItemBackground"
     app:cardCornerRadius="12dp"
-    app:cardElevation="06dp">
+    app:cardElevation="18dp"
+    android:elevation="18dp">
 
 
     <LinearLayout

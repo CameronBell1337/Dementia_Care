@@ -57,7 +57,14 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>
         holder.cardImage.setImageResource(itemImages[position])
 
         holder.itemView.setOnClickListener {_view : View ->
-            Toast.makeText(_view.context, "Clicked on the item", Toast.LENGTH_SHORT).show()
+            Toast.makeText(_view.context, "Clicked on the item$position", Toast.LENGTH_SHORT).show()
+
+            when (position.toInt()) {
+                1 ->
+                {
+
+                }
+            }
         }
     }
 
