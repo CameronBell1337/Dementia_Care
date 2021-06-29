@@ -42,4 +42,31 @@
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
+
+    //All comes stories come from: https://www.alzheimers.org.uk/
+    <string name="link_to_Site">
+        <a href="https://www.alzheimers.org.uk/blog?labels=836">alzheimers.org.uk</a>
+    </string>
+    <!-- Text -->
+    <string name="Story00_1">My name’s Derek Brown, and I care for my wife Margaret, who was diagnosed with Alzheimer’s disease in 2018. We live in North Yorkshire.</string>
+    <string name="Story00_2">Everyone has a trigger point. A point when you know it’s serious. For us, it was in the car coming back from Doncaster airport. Every year, we went away somewhere warm and sunny during winter. We often ended up going to the same resort and the same hotel.</string>
+    <string name="Story00_3">This time however, after a two-week holiday, Margaret turned to me and said, "So, are we going on holiday then?" It really shook me.</string>
+    <string name="Story00_4">We got the diagnosis about six months later. Margaret’s condition has advanced quite quickly since then. She has incontinence now. Changing bed sheets twice a night is exhausting.</string>
+    <string name="Story00_5">Alzheimer’s Society have helped us. Margaret used to have a volunteer who would take her out singing every fortnight. Coronavirus stopped that though. I have been going to a carers group for the last two years. But that has moved online as well now.</string>
+    <string name="Story00_sh">Finding dementia support was difficult</string>
+    <string name="Story00_6">Getting proper help was so tough for the first year or so. It felt like there was so much hard work just to find out the basics. And I passionately believe that isn’t fair. It’s bad enough that we need charities to tell us what benefits we are entitled to, like the Attendance Allowance or a blue badge.</string>
+    <string name="Story00_7">Through my research, I discovered people living with dementia are entitled to a council tax discount – but councils don’t make this easy to claim, at a time in life when you need help the most. Many won’t backdate claims, with some stating that your loved one ‘must have been in need of assistance for at least six months’ before the claim. Six months is a long time to wait.</string>
+    <string name="Story00_8">I submitted Freedom of Information requests to all 382 UK Councils; 380 wrote back. Of those 245 will only backdate discounts if your loved one is in receipt of Attendance Allowance – but how many people know that they’re entitled to it?</string>
+
+    <string name="Story01_1">It was devastating for Jonathan to see his mother’s decline after she was diagnosed with mixed dementia. But the fight he faced for his mother’s care was even worse. After she sadly passed away, Jonathan is calling on Government to keep its promise, and rebuild the social care system.</string>
+    <string name="Story01_2">My mum, Gillian, was a fantastic woman. She cared so deeply about every aspect of her family’s lives and was there for us at every twist and turn. This includes caring for my dad, who lived with dementia and a myriad of physical conditions.</string>
+    <string name="Story01_3">Following Dad’s death, I had hoped that Mum would have an ‘Indian Summer’ with the opportunity to do all the things she’d not been able to do during years of caring for her husband. Perhaps she could have gone to those countries she’d always wanted to visit, continued her studies with the University of the Third Age, and spent more time with her family and friends, all of which she loved. </string>
+    <string name="Story01_4">But in 2014, after my repeated pleas to her GP triggered by my concerns and those of other family members, Mum was diagnosed with dementia as well.</string>
+    <string name="Story01_sh1">After Mum’s diagnosis</string>
+    <string name="Story01_5">By the time the diagnosis was finally made, Mum’s dementia was fairly well-advanced</string>
+    <string name="Story01_6">After six months living independently at home, Mum’s condition had hit her language, making it hard to communicate with her. As a former Head of Modern Languages at a secondary school, words and linguistics were her passion. It was so cruel to see her unable to string a sentence together, knowing she, and her words, were still there but I couldn’t hear them. </string>
+    <string name="Story01_7">It was clear that Mum wouldn’t be able to live on her own for too much longer so my brother and I began the search for care homes in the villages close by.  But we hadn’t bargained on just how quickly we would need to move her.  Out of the blue, I got a call from the ambulance service. They had found Mum on her own, far from home, and by the end of the day, I had driven over to her home and we moved her in to a local care home. </string>
+    <string name="Story01_8">Sadly, this care home really didn’t work out for Mum. There were a number of bad mistakes made and my Mum didn’t get the level of care she deserved or needed.</string>
+    <string name="Story01_9">Coming to terms with Mum’s diagnosis and seeing the changes in her as she began to forget me was challenging. But it was even harder knowing that in the place where she should have felt safe and secure, she just wasn’t getting the care and support she needed. So, even though I knew the upheaval wouldn’t help her, we moved Mum to another home.</string>
+
 </resources>

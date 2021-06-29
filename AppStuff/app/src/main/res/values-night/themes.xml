@@ -2,22 +2,44 @@
     <!-- Base application theme. -->
     <style name="Theme.MobilesAppDev" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/dark_alt_colour</item>
-        <item name="colorPrimaryVariant">@color/blue</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondary">@color/primaryLightColor</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="colorOnSurface">@color/white</item>
-        <item name="colorPrimarySurface">@color/dark_alt_colour</item>
+        <item name="colorPrimarySurface">@color/primaryColor</item>
+
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
     </style>
 
     <style name="navigationTheme">
         <item name="colorPrimary">@color/white</item>
-        <item name="colorControlHighlight">@color/dark_alt_colour</item>
+        <item name="colorControlHighlight">@color/darkGrey</item>
+        <item name="background">@color/darkGrey</item>
+    </style>
+
+    <style name="toolbarTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="background">@color/darkGrey</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="closeButtonTheme">
+        <item name="backgroundTint">@color/darkGrey</item>
+        <item name="colorControlHighlight">@color/primaryDarkColor</item>
+    </style>
+
+    <style name="cardViewTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12dp</item>
     </style>
 </resources>
