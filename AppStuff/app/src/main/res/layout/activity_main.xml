@@ -54,7 +54,7 @@
                     android:layout_height="200dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="64dp"
+                    android:layout_marginTop="72dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginBottom="8dp"
@@ -84,7 +84,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardView02"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
@@ -100,37 +100,59 @@
                     app:layout_goneMarginBottom="8dp"
                     app:layout_goneMarginTop="8dp">
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/notification2Button"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:layout_marginTop="20dp"
-                        android:clickable="true"
-                        android:text="TEST NOTIFICATION 2"
-                        app:cornerRadius="12dp"
-                        app:icon="@drawable/ic_baseline_close_24" />
+                        android:orientation="vertical"
+                        android:paddingBottom="32dp"
+                        >
 
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Schedule"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/_noReminders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="Nothing Schdeduled"
+                            android:textColor="@color/light_grey"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            android:layout_marginLeft="20dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/_remindersView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:visibility="visible"
+                            android:fadingEdge="horizontal"
+                            android:orientation="horizontal" />
+
+
+
+                    </LinearLayout>
+
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/notification1Button"
+                        android:id="@+id/addFButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="true"
-                        android:text="TEST NOTIFICATION 1"
-                        app:cornerRadius="12dp"
-                        app:icon="@drawable/ic_baseline_close_24" />
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/cancelnotificationButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="50dp"
-                        android:clickable="true"
-                        android:text="CANCEL TEST NOTIFICATION"
-                        app:cornerRadius="12dp"
-                        app:icon="@drawable/ic_baseline_close_24" />
+                        android:text="ADD"
+                        android:src="?attr/colorPrimary"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:layout_gravity="right|bottom"
+                        android:layout_margin="8dp"
+                        app:fabCustomSize="40dp"/>
 
                 </com.google.android.material.card.MaterialCardView>
 

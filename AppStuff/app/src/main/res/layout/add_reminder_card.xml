@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:elevation="16dp"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:text="Add Event information"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:hint="Title"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/editMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:hint="Message"
+                android:textSize="16dp"
+                />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:hint="Date and Time"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="14dp"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:layout_gravity="bottom">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/selectDateBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorOnPrimary"
+                    android:elevation="24dp"
+                    android:gravity="left|bottom"
+                    android:text="Select Date"
+                    app:backgroundTint="?attr/colorOnSecondary"
+                    app:cornerRadius="12dp"
+                    app:rippleColor="?attr/colorPrimary"
+                    android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addEventButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="?attr/colorOnPrimary"
+                    android:elevation="24dp"
+                    android:text="Add"
+                    app:backgroundTint="?attr/colorOnSecondary"
+                    app:cornerRadius="12dp"
+                    app:rippleColor="?attr/colorPrimary"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="2dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

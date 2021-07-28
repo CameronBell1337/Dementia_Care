@@ -129,7 +129,7 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>
 
                     _view.context.startActivity(intent, options.toBundle())
                 }
-                else  -> return@setOnClickListener
+                else -> return@setOnClickListener
 
             }
 
@@ -150,33 +150,27 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>
 
 class RecyclerViewAdapter1 : RecyclerView.Adapter<RecyclerViewAdapter1.ViewHolder>() {
 
-    //Information came from: https://www.alzheimers.org.uk/
+    //Activities
     private val itemTitleArray = arrayOf(
-        "'BOIBOBIBI'",
-        "‘I wanted to look after Mum, but spent years wrangling with an unfair system’",
-        "‘As long as Grandma keeps smiling, we know she is doing okay’",
-        "Behind the Cure The Care System film: ‘It was an ode to my mum and dad’",
-        "‘Mum received fantastic care. Why isn't it the same for everyone?’",
-        "‘Bonnie deserves the best quality care’",
-        "'Juggling work, home-schooling, and full-time care'"
+        "Remember the past",
+        "Social Groups",
+        "Exercise together",
+        "Cooking & Baking",
+        "Word Games",
     )
     private val itemInfoArray = arrayOf(
-        "Derek cares for his wife Margaret, who has Alzheimer's disease, but their experience of the care system has been difficult and they want more support.",
+        "People with dementia are more likely to remember older memories. Reminiscence therapy uses prompts, like: photographs, familiar objects or music to help someone recall those memories",
         "Following his mother's death, Jonathan is calling on Government to keep its promise and rebuild the social care system.",
         "Meera’s grandmother has mixed dementia. Meera shares how the family cares for her grandma with the help of agency carers.",
         "Actor Kate Dickie shares why she took part in our hard-hitting Cure The Care System film, and a message to other people affected by dementia.",
         "The support Julia's mum, Gladys, received was exceptional. Julia wants to help families not as lucky as her own to receive the same.",
-        "In March 2020, David moved in with his best friend Bonnie, who has dementia, to take on her full-time care, but the support provided to him has been minimal.",
-        "Sara's family has been caring for her dad, Brian, who has frontotemporal dementia (FTD). They've lived through the flawed care system and want Government to act."
     )
     private val itemImages = intArrayOf(
-        R.drawable.ic_new_logo,
-        R.drawable.story01,
-        R.drawable.story02,
-        R.drawable.story03,
-        R.drawable.story04,
-        R.drawable.story05,
-        R.drawable.story06
+        R.drawable.remember_past,
+        R.drawable.social_group,
+        R.drawable.exercise,
+        R.drawable.cooking,
+        R.drawable.word_games,
     )
 
 

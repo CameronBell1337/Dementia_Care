@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Fragments -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -47,6 +47,10 @@
     <string name="link_to_Site">
         <a href="https://www.alzheimers.org.uk/blog?labels=836">alzheimers.org.uk</a>
     </string>
+
+    <string name="link_to_video">
+        <a href="https://youtu.be/g6rk88V-TvM">Cure the Care System</a>
+    </string>
     <!-- Text -->
     <string name="Story00_1">My name’s Derek Brown, and I care for my wife Margaret, who was diagnosed with Alzheimer’s disease in 2018. We live in North Yorkshire.</string>
     <string name="Story00_2">Everyone has a trigger point. A point when you know it’s serious. For us, it was in the car coming back from Doncaster airport. Every year, we went away somewhere warm and sunny during winter. We often ended up going to the same resort and the same hotel.</string>
@@ -68,5 +72,93 @@
     <string name="Story01_7">It was clear that Mum wouldn’t be able to live on her own for too much longer so my brother and I began the search for care homes in the villages close by.  But we hadn’t bargained on just how quickly we would need to move her.  Out of the blue, I got a call from the ambulance service. They had found Mum on her own, far from home, and by the end of the day, I had driven over to her home and we moved her in to a local care home. </string>
     <string name="Story01_8">Sadly, this care home really didn’t work out for Mum. There were a number of bad mistakes made and my Mum didn’t get the level of care she deserved or needed.</string>
     <string name="Story01_9">Coming to terms with Mum’s diagnosis and seeing the changes in her as she began to forget me was challenging. But it was even harder knowing that in the place where she should have felt safe and secure, she just wasn’t getting the care and support she needed. So, even though I knew the upheaval wouldn’t help her, we moved Mum to another home.</string>
+
+    <string name="Story02_1">Meera’s grandma was diagnosed with Alzheimer’s disease more than 18 years ago, and mixed dementia later in life. Here she shares how the family have banded together to care for her, with the help of agency carers.</string>
+    <string name="Story02_2">Ba’s (we call her Ba – Gujarati for ‘grandma’) two passions were her love of gardening and cooking, specifically cooking for loved ones. Growing up, she was a doting grandma and was devoted to her family – my grandad, her four children and their spouses, but mostly her ten grandchildren who she used to spoil endlessly.</string>
+    <string name="Story02_3">She helped to raise my brother and I alongside my granddad whilst my parents were at work. As we lived in the same house, we spent the majority of our time together and I used to share a bedroom with Ba, further strengthening our bond. We are still extremely close and as long as she keeps smiling (she has a killer smile!) and laughing as she does to this day – I know she is doing okay.</string>
+    <string name="Story02_sh1">Noticing the signs</string>
+    <string name="Story02_4">Initially we didn’t have any awareness of Alzheimer’s. It took a few years for Ba to get a diagnosis.</string>
+    <string name="Story02_5">At first we noticed changes in her behaviour and overall mood. She had a bubbly, charismatic character and was always the life and soul of the family, but she had started to become very angry and defensive over time and wouldn’t smile as much. She became more agitated and gradual memory loss crept in. She would start repeating her words, forget conversations that had taken place the day before or even hours earlier, and would always reminisce about memories from years ago.</string>
+    <string name="Story02_6">Throughout Ba’s battle with Alzheimers, he treated her no differently regardless of her changing nature and showered her with continuous love and affection with which we all followed suit.</string>
+    <string name="Story02_sh2">Advancing care needs</string>
+    <string name="Story02_7">Ba is now in the advanced stages of Alzheimer’s and vascular dementia; she is 81 and developed symptoms very early on. She can no longer walk, she has a wheelchair to move within the house which she has to be lifted into and out of, and she cannot verbally communicate and speak. We also feed her as she has lost mobility</string>
+    <string name="Story02_8">We converted our dining room into Ba’s bedroom around 12 years ago when she fully lost the ability to walk upstairs. She has a hospital bed to assist with her movement and care, and we converted our garage into a shower room as we had no bathing facilities downstairs.</string>
+
+    <string name="Story03_1">Actor Kate Dickie’s connection to dementia played a big part in why she took part in Alzheimer’s Society’s hard-hitting Cure The Care System film. Kate shares an important message for other people affected by dementia.</string>
+    <string name="Story03_2">This Dementia Action Week, Alzheimer’s Society is calling on the Government to cure the care system now. To help get this important message across, our new film has been launched to show the impact of caring for a person with dementia.</string>
+    <string name="Story03_3">Featuring Kate Dickie playing the character Anna, the film highlights some of the day-to-day challenges a primary carer of a person with dementia has to face. </string>
+    <string name="Story03_4">Kate has been in many major films, stage plays and television programmes, including Game of Thrones, Tinsel Town, Red Road and Prometheus.</string>
+    <string name="Story03_5">Kate kindly spoke with us about why she was eager to take part in the Cure The Care System film, and has a message for other people affected by dementia.</string>
+    <string name="Story03_sh1">Watch the two-minute film, and read Kate’s personal story – continued below.</string>
+    <string name="Story03_sh2" >Kates story</string>
+    <string name="Story03_sh3">Taking part in the Cure The Care System film</string>
+    <string name="Story03_6">‘When this came up as a casting opportunity, my heart leapt. I really wanted to do it as I had first-hand experience of how difficult dementia can be. I understood the circumstances of the carer, the pain, and the grief. I wanted to do it as an ode to my mum and dad, who had been in a similar situation.</string>
+    <string name="Story03_7">‘Ahead of filming, I began to feel a little apprehensive. It started to bring back memories I’d put away for a long time. But on the day, we were making the best film we could for Alzheimer’s Society. I didn’t feel like I was carrying in too much grief for my mum.</string>
+    <string name="Story03_8">‘My focus was portraying Anna and the situation with her husband, Peter. Everyone on the film shoot was really committed to it, which was lovely to see. Mark, who portrayed Peter, was amazing. He brought so much empathy and understanding with nuances of behaviour and physicality.’</string>
+    <string name="Story03_sh4">Keeping Mum in mind</string>
+    <string name="Story03_9">‘I was asked to bring some photos of me to include within the film. I also brought along a framed black-and-white picture of my mum from the 1950s. I really wanted her to be there on set with me. I was pleased that her picture was placed on the dresser in the bedroom of the house. I was doing it for her. </string>
+    <string name="Story03_10">‘Mum had been diagnosed with Alzheimer’s disease in her early-50s, and passed away at 55 in 1994. My dad, my siblings and I suspected something was wrong a number of years before.</string>
+    <string name="Story03_11">‘It was little things at first. When she was around 47, we noticed Mum would replace words by mistake and say, “Dinner’s in the onion!” instead of the oven. Mum began to get more flustered and mixing other things up.</string>
+
+    <string name="Story04_1">Julia’s mum, Gladys, lived with vascular dementia. She was a bubbly, social woman and her care replicated that. The support Gladys received was exceptional, and now Julia would like to help families, not as lucky as her own, to receive the same.</string>
+    <string name="Story04_2">When I think of my mum, I think of the bubbly, caring lady she was. Dressing up as a clown outside the charity shop where she worked, making jokes – even when you didn’t quite know it was a joke. Never missing a family holiday or the opportunity to have fish and chips with her grandchildren.</string>
+    <string name="Story04_3">After a severe stroke, which took her into hospital, Mum started to go downhill physically. Four years later, after experiencing another stroke, she was diagnosed with vascular dementia.</string>
+    <string name="Story04_4">As we adjusted to the physical and cognitive effects of the stroke and dementia, alongside her scoliosis and arthritis, social services helped in every way they could. They arranged a grant to turn her bathroom into a wet room, sourced devices such as flashing alarms and phones, and altered her chair to suit her best.</string>
+    <string name="Story04_5">We attended sessions arranged by the local authority ‘Managing Memory Together’ team. They helped us better understand the behaviour changes we may see in Mum and connect with others in similar situations. </string>
+    <string name="Story04_6">The local authority provided fantastic personal care for Mum, giving her meals, helping her to go about day-to-day tasks and stay safe in her home. But what was missing was social care – allowing mum to enjoy the rest of the day and carry on doing the things she loved.</string>
+    <string name="Story04_sh1">When Mum met Chrissy</string>
+    <string name="Story04_7">Mum\'s need for friendship, and time to talk, is how, and why, she met Chrissy. A companion to Mum, Chrissy was a friend of a friend who had been struggling in a the same situation.</string>
+    <string name="Story04_8">Chrissy was and still is the warmest person. She would sit with Mum for a couple of hours a week, soon turning into 5 days a week, and slowly began helping with needs around the house. Every day she would come in and give Mum a hug – just like she was family. </string>
+    <string name="Story04_9">I often joked ‘I think she loves you more than me!’ - a testament to their closeness.</string>
+    <string name="Story04_10">Chrissy got to know Mum, but she also knew how dementia affected her. She taught me how best to communicate with Mum. Kneeling on her level, maintaining eye contact and giving her time to respond. She cared for Mum by understanding who she was, her needs and connecting with us as a family and her community.</string>
+    <string name="Story04_11">All this seemed to come naturally to Chrissy, but the care system should not assume that carers understand the complex nature of dementia. All carers should be trained to understand and care for people with dementia.</string>
+    <string name="Story04_12">With Chrissy’s help, and the help of local authority visits, our life could carry on. While Mum’s care was always at the forefront of my mind, life was a little easier than it is for so many in our situation.</string>
+    <string name="Story04_sh2">Mum was admitted to hospital</string>
+    <string name="Story04_13">One evening, Mum rang me in a panic. She said she felt dreadful, and her breathing was light.</string>
+    <string name="Story04_14">After reaching out to paramedics she was admitted into hospital, where doctors told us she was in her last days. Mum sadly passed away several days later at home.</string>
+    <string name="Story04_15">While her visit to hospital was brief, her final few days stuck with me. The nurses and doctors seemed to have no understanding of her needs as a patient with dementia. One day we found her severely dehydrated and constantly desperate for the toilet – things she had not been able to communicate, but which should have been spotted. They fitted a catheter, but she didn’t understand.</string>
+    <string name="Story04_16">While the doctors were sympathetic to our situation, the lack of understanding was awful. It made clear to me the difference between the good quality care we had experienced, and how, without the appropriate training, care could be so poor for someone living with dementia.</string>
+
+    <string name="Story05_1">In March 2020, David moved in with his best friend Bonnie to take on her full-time care. With over a year gone by, the support provided to him has been minimal, leaving David to question, how best to support his friend - a decision he should not have to make.</string>
+    <string name="Story05_2">Bonnie and I have been friends for nearly 20 years. We have a rare, unique relationship – she is my best friend, the sharpest cookie I know and a highly social individual</string>
+    <string name="Story05_3">Being so close, I was the first to notice that something was awry. She began to forget her PIN number and lose things around the house. After some hesitation by the GP, Bonnie was diagnosed with Alzheimer disease, aged 66.</string>
+    <string name="Story05_sh1">Moving in for lockdown</string>
+    <string name="Story05_4">Before the pandemic, I already did most of Bonnie’s care. But two weeks before lockdown, I decided to move in full time to look after her. It meant I couldn’t see my partner or daughter for three months which was crushing but I do not regret it. </string>
+    <string name="Story05_5">I want Bonnie to live safely at home for as long as possible, and that means my role is 24/7. Waking at dawn when she does, keeping her company during the day and making sure she sleeps soundly at night. But I need more support to do it all.</string>
+    <string name="Story05_6">Over lockdown, I saw a sharp decline in Bonnie and, at points, in me. Any additional care or support I did have stopped, social contact was little to none and, our life changed drastically.</string>
+    <string name="Story05_7">The support of the social care system, be that day centres, care homes or a friendly social worker, is vital. For her, it’s the social interaction. For me, it is being able to take the weight off my shoulders.</string>
+    <string name="Story05_8">Without it, I have felt the strain. Fighting to access a carer allowance, financially supporting my daughter and keeping my passion for music going, I have been left without a penny. But I have also been left without a moment rest, or any guidance as Bonnie’s condition has progressed.</string>
+    <string name="Story05_9">We have relied heavily on peers at our local Young Onset Group, and Alzheimer’s Society support workers. However, without my proactive nature, this help would have been hard to find, and at points of crisis, almost impossible.</string>
+    <string name="Story05_sh2">Abandoned by the Government</string>
+    <string name="Story05_10">As Bonnie’s carer and a carer to my mother and father before that, I have navigated the social care system more than once. Yet 40 years on, my experience of the system remains the same; inconsistent, neglectful, and unsustainable. </string>
+    <string name="Story05_11">A dementia diagnosis should not mean your savings are drained, you should be able to cherish those years left with your loved ones, with purpose, meaning and connection.</string>
+    <string name="Story05_12">I strongly believe in the phrase ‘the true measure of any society can be found in how it treats its most vulnerable members.’ Our social care system has been decimated and torn apart, leaving those living with dementia and their loved ones to feel isolated and ill supported.</string>
+    <string name="Story05_13">As Bonnie’s carer I am exhausted, however as Bonnie’s best friend I am her biggest champion. But the question that stays with me now is, how do I support her best? Do I fight to keep her at home, or support her in care as a friend?</string>
+    <string name="Story05_14">I am a complete optimist. I try to make the best of it every day. But there are some days where I cannot express how sad I feel about seeing Bonnie begin to slip away now. There are moments of sheer terror. I need the right social care support so I can care for Bonnie the best I can. </string>
+    <string name="Story05_15">She deserves the best quality care. She is a wonderful woman. She can remember things that happened 10 or 15 years ago, and we still laugh together every day. But just because she is not quite the woman she was does not mean she is not there. She’s not gone yet. Government must step in so I can keep going. </string>
+    <string name="Story05_16"> Because while dementia isn’t curable yet, the care system is.</string>
+
+    <string name="Story06_1">During coronavirus, Sara and her family had been caring for her dad, Brian, who has frontotemporal dementia (FTD), in addition to working and home-schooling. They have lived through the flawed care system and are now calling on Government to act.</string>
+    <string name="Story06_2">At the beginning of 2020, my dad, Brian lived relatively independently with support. Every day, he would be collected by the local bus service to make his way to the day centre.</string>
+    <string name="Story06_3">Dad relied on structure and routine; a love for getting outdoors and an ice cream at the park. However, as day centres closed their doors due to coronavirus, this lifeline was taken away, with no sign of further care for him or support for me and my family.</string>
+    <string name="Story06_sh1">Family carers are exhausted, over 40% are caring over 100 hours per week</string>
+    <string name="Story06_4">In April 2020, we were left with the challenging but only decision possible, for myself, my husband and my eleven-year-old daughter, Aimee - to move in with Dad.</string>
+    <string name="Story06_sh2">Managing caring responsibilities with other commitments</string>
+    <string name="Story06_5">Juggling work, home-schooling, and full-time care, we did our absolute best, but the pressure mounted.</string>
+    <string name="Story06_6">On good days, break-times for Aimee were cuddling up to her Grandad and reading to him. For me, it was witnessing the fun they have in each other’s company.</string>
+    <string name="Story06_7">But on bad days, Dad was up and down the stairs, pacing around the house, back across the room and unable to leave my side, familiarity and routine were key to him.</string>
+    <string name="Story06_8">There was simply no support available to support Dad living with us. The answers we got were he should have remained on his own. The feelings of confusion, anger and isolation he felt, I felt them too.</string>
+    <string name="Story06_9">Due to his frontotemporal dementia (FTD), Dad lost his ability to communicate, and when his discomfort grew, understanding his needs became trickier and trickier.</string>
+    <string name="Story06_10">Shortly after entering respite care, Dad had a number of falls.</string>
+    <string name="Story06_11">At 6’2 he is a gentle giant, and a very tactile man. However, without the correct care and attention, he can tumble very far. Within 36 hours, Dad had three falls.</string>
+    <string name="Story06_12">Negligence in the system resulted in a battle to visit him in hospital and then more change for him to place him in a different care home.</string>
+    <string name="Story06_sh3">Battling with an unfair care system</string>
+    <string name="Story06_13">Whilst after some time both Dad and my family have felt more settled, now the challenge we face is distance, a lack of connection, and the deterioration that the lack of Government support has caused to Dad’s condition.</string>
+    <string name="Story06_14">My daughter, Aimee, would love to bake for my dad and the other residents at the care home or read with him as she did before.</string>
+    <string name="Story06_15">Since Dad’s diagnosis I have seen care in every form. The care my daughter gives to my dad, the care Cathy, a Dementia Support Worker at Alzheimer’s Society, has given me, but also the care provided by a system that has been stretched to its limit.</string>
+    <string name="Story06_16">Right now, our flawed social care system means that nearly a million UK families are struggling to care for their loved ones with the dignity and support they deserve.</string>
+    <string name="Story06_17">Decades of under-funding have led to a system that’s difficult to access, costly, inadequate and unfair.</string>
+    <string name="Story06_18"> It doesn’t have to be this way.</string>
+
 
 </resources>

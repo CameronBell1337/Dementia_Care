@@ -8,7 +8,6 @@
     android:elevation="12dp"
     android:minHeight="?attr/actionBarSize"
     android:theme="@style/toolbarTheme"
-
-    >
+    app:titleTextAppearance="@font/montserrat_alternates_bold">
 
 </com.google.android.material.appbar.MaterialToolbar>

@@ -2,8 +2,10 @@ package com.example.mobilesappdev.fragments
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.View
 import android.widget.ImageButton
+import android.widget.TextView
 import com.example.mobilesappdev.R
 
 class Story03 : AppCompatActivity() {
@@ -11,6 +13,9 @@ class Story03 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story03)
         closeButton()
+
+        val text : TextView = findViewById(R.id.websiteLink)
+        text.movementMethod = LinkMovementMethod.getInstance()
     }
 
     private fun closeButton()

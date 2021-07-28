@@ -19,37 +19,161 @@
         app:cardElevation="12dp"
         app:cardUseCompatPadding="true">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:fadingEdge="horizontal"
+        <ImageButton
+            android:id="@+id/cardCloseButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="?attr/backgroundTint"
+            android:elevation="02dp"
+            android:gravity="center"
             android:scaleType="centerCrop"
-            android:src="@drawable/story02"
-            android:transitionName="card_transition" />
+            android:src="@drawable/ic_baseline_close_24"
+            android:theme="@style/closeButtonTheme"
+            app:cornerRadius="20dp"
+            app:iconGravity="start"
+            app:iconPadding="5dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/cardCloseButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:backgroundTint="?attr/backgroundTint"
-                android:elevation="02dp"
-                android:gravity="center"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_baseline_close_24"
-                android:theme="@style/closeButtonTheme"
-                app:cornerRadius="20dp"
-                app:iconGravity="start"
-                app:iconPadding="5dp"
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:fadingEdge="horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/story02"
+                        android:transitionName="card_transition" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Meera’s dementia story: ‘As long as Grandma keeps smiling, we know she is doing okay’"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnPrimary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Story02_1"
+                        android:textSize="14dp"
+                        android:textColor="?attr/colorOnSecondary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Story02_2"
+                        android:textSize="14dp"
+                        android:textColor="?attr/colorOnSecondary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Story02_3"
+                        android:textSize="14dp"
+                        android:textColor="?attr/colorOnSecondary"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:fadingEdge="horizontal"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/story02_03"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Story02_sh1"
+                        android:textSize="16dp"
+                        android:textStyle="bold" android:textColor="?attr/colorOnSecondary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Story02_4"
+                        android:textSize="14dp" android:textColor="?attr/colorOnSecondary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Story02_5"
+                        android:textSize="14dp"
+                        android:textColor="?attr/colorOnSecondary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Story02_6"
+                        android:textSize="14dp" android:textColor="?attr/colorOnSecondary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Story02_sh2"
+                        android:textSize="16dp"
+                        android:textStyle="bold" android:textColor="?attr/colorOnSecondary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Story02_7"
+                        android:textSize="14dp" android:textColor="?attr/colorOnSecondary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Story02_8"
+                        android:textSize="14dp" android:textColor="?attr/colorOnSecondary"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:fadingEdge="horizontal"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/story02"
+                        android:layout_marginBottom="5dp"
+                        />
+
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 

@@ -17,9 +17,7 @@
         android:elevation="12dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="12dp"
-        app:cardUseCompatPadding="true"
-        android:theme="@style/cardViewTheme">
-
+        app:cardUseCompatPadding="true">
 
 
         <ImageButton
@@ -48,6 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fillViewport="true">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -60,11 +59,13 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/story01"
                         android:transitionName="card_transition" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:text="‘I wanted to look after Mum, but spent years wrangling with an unfair system’ - Jonathan's story"
+                        android:textColor="?attr/colorOnPrimary"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -74,8 +75,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_1"
-                        android:textSize="14dp"
-                        />
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -83,8 +84,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_2"
-                        android:textSize="14dp"
-                        />
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -92,8 +93,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_3"
-                        android:textSize="14dp"
-                        />
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -101,8 +102,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_4"
-                        android:textSize="14dp"/>
-
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="14dp" />
 
 
                     <TextView
@@ -111,8 +112,9 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_sh1"
+                        android:textColor="?attr/colorOnSecondary"
                         android:textSize="16dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -120,7 +122,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_5"
-                        android:textSize="14dp"/>
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -128,17 +131,16 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_6"
-                        android:textSize="14dp"
-                        />
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="14dp" />
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="250dp"
+                        android:layout_marginBottom="5dp"
                         android:fadingEdge="horizontal"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/story01_01"
-                        android:layout_marginBottom="5dp"
-                        />
+                        android:src="@drawable/story01_01" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -146,7 +148,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_7"
-                        android:textSize="14dp"/>
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -154,7 +157,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_8"
-                        android:textSize="14dp"/>
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -162,17 +166,16 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_9"
-                        android:textSize="14dp"/>
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="14dp" />
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="250dp"
+                        android:layout_marginBottom="5dp"
                         android:fadingEdge="horizontal"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/story01_02"
-                        android:layout_marginBottom="5dp"
-                        />
-
+                        android:src="@drawable/story01_02" />
 
 
                 </LinearLayout>
