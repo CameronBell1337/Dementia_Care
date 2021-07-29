@@ -17,11 +17,11 @@ class ReminderAdapter(val c: Context, val userList:List<Reminders>) :
     inner class MyViewHolder(val v: View) : RecyclerView.ViewHolder(v) {
         var Summary = v.findViewById<TextView>(R.id.summaryReminder)
         var Title = v.findViewById<TextView>(R.id.titleReminderReminder)
-        //var RemindDate : TextView
+        var RemindDate = v.findViewById<TextView>(R.id.dateTime)
 
         init {
             Summary = itemView.findViewById(R.id.summaryReminder)
-            //RemindDate = itemView.findViewById(R.id.dateTime)
+            RemindDate = itemView.findViewById(R.id.dateTime)
             Title = itemView.findViewById(R.id.titleReminderReminder)
         }
     }
@@ -37,7 +37,7 @@ class ReminderAdapter(val c: Context, val userList:List<Reminders>) :
         val reminders = userList[i]
         holder.Title.text  = reminders.Title
         holder.Summary.text  = reminders.Summary
-        //holder.RemindDate?.text  = reminders!!.RemindDate.toString()
+        holder.RemindDate.text  = reminders!!.RemindDate.toString()
     }
 
     override fun getItemCount(): Int {
