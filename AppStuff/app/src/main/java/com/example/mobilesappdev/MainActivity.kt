@@ -25,7 +25,10 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import com.example.mobilesappdev.adapters.*
 import com.google.android.material.navigation.NavigationView
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.reflect.Type
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -60,6 +63,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         setup()
         reminderViewSetup()
+        setItemsInRecycler()
         text.movementMethod = LinkMovementMethod.getInstance()
 
         addsBtn.setOnClickListener { addReminder() }
@@ -78,7 +82,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun reminderViewSetup() {
 
         val snapHelper1: SnapHelper = LinearSnapHelper()
-        userList = ArrayList<Reminders>()
+        //userList = ArrayList<Reminders>()
+        LoadData()
         addsBtn = findViewById(R.id.addFButton)
         reminderadapter3 = ReminderAdapter(this, userList)
         recyclerView3 = findViewById(R.id._remindersView)
@@ -89,15 +94,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         )
         recyclerView3.adapter = reminderadapter3
         snapHelper1.attachToRecyclerView(recyclerView3)
+
     }
 
 
 
     fun setItemsInRecycler()
     {
+        val noReminder : TextView = findViewById(R.id._noReminders)
         if(userList.size>0)
         {
-
+            if(userList.size==1) {
+                noReminder.text = "You have ${userList.count().toString()} reminder currently. "
+            }
+            else if(userList.size>=2)
+            {
+                noReminder.text = "You have ${userList.count().toString()} reminders currently. "
+            }
+        }
+        else
+        {
+            noReminder.text = "Nothing Scheduled."
         }
     }
 
@@ -108,40 +125,130 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val addDialog = Dialog(this)
         val titleS = v.findViewById<EditText>(R.id.editTitle)
         val summary = v.findViewById<EditText>(R.id.editMessage)
+        val date : TextView = v.findViewById(R.id.date)
         val dialog : Dialog
 
         selectBtn = v.findViewById(R.id.selectDateBtn)
         confirmBtn = v.findViewById(R.id.addEventButton)
 
         addDialog.setContentView(v)
-        confirmBtn.setOnClickListener{
-            val title = titleS.text
-            val message = summary.text
-            if(title.toString() != "" && message.toString() != "") {
-                userList.add(Reminders(title.toString(), message.toString()))
-                reminderadapter3.notifyDataSetChanged()
-                addDialog.dismiss()
-            }
-            else
-            {
-                Toast.makeText(this, "Please fill out ALL fields", Toast.LENGTH_SHORT).show()
-            }
 
+        val newCalender = Calendar.getInstance()
+        selectBtn.setOnClickListener {
+            val dialog = DatePickerDialog(
+                this,
+                { _, year, month, dayOfMonth ->
+                    val newDate = Calendar.getInstance()
+                    val newTime = Calendar.getInstance()
+                    val time = TimePickerDialog(
+                        this,
+                        { _, hourOfDay, minute ->
+                            newDate[year, month, dayOfMonth, hourOfDay, minute] = 0
+                            val temp = Calendar.getInstance()
+                            if (newDate.timeInMillis - temp.timeInMillis > 0)
+                                date.text = (newDate.time.toString()
+                                        )
+                            else {
+                                Toast.makeText(this, "Invalid time", Toast.LENGTH_SHORT).show()
+                            }
+                        },
+                        newTime[Calendar.HOUR_OF_DAY],
+                        newTime[Calendar.MINUTE], true
+                    )
+                    time.show()
+                },
+                newCalender[Calendar.YEAR],
+                newCalender[Calendar.MONTH], newCalender[Calendar.DAY_OF_MONTH]
+            )
+            dialog.datePicker.minDate = System.currentTimeMillis()
+            dialog.show()
         }
-
-
-        selectBtn.setOnClickListener{
+        confirmBtn.setOnClickListener{
 
             //val dialog = Dialog as DialogInterface
             val title = titleS.text
             val message = summary.text
-            userList.add(Reminders(title.toString(), message.toString()))
-            reminderadapter3.notifyDataSetChanged()
-            addDialog.dismiss()
+            val dates = date.text
+            val reminders : Reminders
+            if(title.toString() != "" && message.toString() != "" && dates.toString() != "Date and Time") {
+                val remind: Date = Date(dates.toString().trim { it <= ' ' })
+                newCalender.time = remind
+                newCalender.set(Calendar.SECOND, 0)
+                userList.add(Reminders(title.toString(), message.toString(), remind))
+                val l : ArrayList<Reminders> = userList
+                reminders = l[l.size -1]
+                SavedData()
+                reminderadapter3.notifyDataSetChanged()
+                val intent = Intent(this, NotificationReceiver::class.java)
+                intent.putExtra("Title", reminders.Title)
+                intent.putExtra("Message", reminders.Summary)
+                intent.putExtra("RemindDate", reminders.RemindDate.toString())
+                val intent1 = PendingIntent.getBroadcast(
+                    this,
+                    0,
+                    intent,
+                    PendingIntent.FLAG_UPDATE_CURRENT
+                )
+                val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
+                alarmManager.setExact(AlarmManager.RTC_WAKEUP, newCalender.timeInMillis, intent1)
+                setItemsInRecycler()
+                addDialog.dismiss()
+            }
+            else
+            {
+                if(title.toString() == "") {
+                    Toast.makeText(this, "Missing Title", Toast.LENGTH_SHORT).show()
+                }
+                else if(message.toString() == "")
+                {
+                    Toast.makeText(this, "Missing Summary", Toast.LENGTH_SHORT).show()
+                }
+                else if(date.toString() == "Date and Time")
+                {
+                    Toast.makeText(this, "Missing Time & Date", Toast.LENGTH_SHORT).show()
+                }
+                else
+                {
+                    Toast.makeText(this, "Missing Fields", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
         addDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     addDialog.create()
     addDialog.show()
+    }
+
+    fun LoadData()
+    {
+        val sharedPreferences : SharedPreferences = getSharedPreferences(
+            "shared prefereces",
+            MODE_PRIVATE
+        )
+        val gson : Gson = Gson()
+        val json : String? = sharedPreferences.getString("reminder list", null)
+        val type : Type = object : TypeToken<ArrayList<Reminders>>() {}.type
+
+        userList = gson.fromJson(json, type)
+
+
+        if(userList == null)
+        {
+            userList = ArrayList()
+        }
+    }
+
+    fun SavedData()
+    {
+        val sharedPreferences : SharedPreferences = getSharedPreferences(
+            "shared prefereces",
+            MODE_PRIVATE
+        )
+        val editor : SharedPreferences.Editor = sharedPreferences.edit()
+        val gson : Gson = Gson()
+
+        val json : String = gson.toJson(userList)
+        editor.putString("reminder list", json)
+        editor.apply()
     }
 
     private fun drawerLayoutSetup() {

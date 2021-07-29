@@ -3,21 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="200dp"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="match_parent"
         android:transitionName="card_transition"
         app:cardCornerRadius="12dp"
         app:cardElevation="12dp"
         app:cardUseCompatPadding="true"
+        android:gravity="center"
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"

@@ -10,7 +10,7 @@ data class Reminders(
 
     var Title: String,
     var Summary: String,
-    //var RemindDate: Date
+    var RemindDate: Date
 
 
 )

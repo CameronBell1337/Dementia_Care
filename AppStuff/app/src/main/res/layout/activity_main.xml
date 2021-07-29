@@ -135,9 +135,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="8dp"
-                            android:visibility="visible"
-                            android:fadingEdge="horizontal"
-                            android:orientation="horizontal" />
+                            android:orientation="vertical"
+                            android:layout_gravity="center" />
 
 
 
