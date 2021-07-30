@@ -502,10 +502,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intent)
 
             }
-            R.id._prefMenuItem -> {
-                intent = Intent(this, PreferencesActivity::class.java)
-                startActivity(intent)
-            }
             R.id._settingMenuItem -> {
                 intent = Intent(this, SettingsActivity::class.java)
                 startActivity(intent)

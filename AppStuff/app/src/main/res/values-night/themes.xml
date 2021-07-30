@@ -3,12 +3,13 @@
     <style name="Theme.MobilesAppDev" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/primaryLightColor</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
         <item name="colorOnSecondary">@color/light_grey</item>
+
         <!-- Status bar color. -->
         <item name="android:fontFamily">@font/montserrat_alternates_bold</item>
         <!-- Customize your theme here. -->

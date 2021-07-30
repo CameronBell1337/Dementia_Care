@@ -12,7 +12,24 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="Test"/>
+    <PreferenceCategory app:title="Notifications">
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/schedule"
+            android:entryValues="@array/schedule_values"
+            android:key="Schedule"
+            app:useSimpleSummaryProvider="true"
+            android:title="Schedule" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Account">
+        <SwitchPreference app:title="Active"
+            android:defaultValue="true"
+            android:key="Account"
+            app:summary="(Currently not in use)"
+            />
+
+    </PreferenceCategory>
 
 
 </PreferenceScreen>

@@ -221,3 +221,85 @@ class RecyclerViewAdapter1 : RecyclerView.Adapter<RecyclerViewAdapter1.ViewHolde
 
 
 }
+
+class RecyclerViewAdapter2 : RecyclerView.Adapter<RecyclerViewAdapter2.ViewHolder>() {
+
+    //Activities
+    private val itemTitleArray = arrayOf(
+        "About Dementia",
+        "Dementia Research",
+        "Living with Dementia",
+        "Self Care",
+        "Books",
+        "Financial",
+        "Legal Help",
+
+    )
+    private val itemInfoArray = arrayOf(
+        "Learn more about dementia and how it affects people.",
+        "Learn more about what is currently being researched.",
+        "Tips for communicating with people with Dementia.",
+        "Tips to help you or others struggling with Dementia.",
+        "List of books to read.",
+        "Find out what aid you eligible for.",
+        "Information on legal affairs for someone with Dementia.",
+
+    )
+    private val itemImages = intArrayOf(
+        R.drawable.bain_v2,
+        R.drawable.ic_new_logo,
+        R.drawable.living_with_dementia_v2,
+        R.drawable.self_care_v2,
+        R.drawable.book_v2,
+        R.drawable.coin_stack_v2,
+        R.drawable.legal_v2,
+    )
+
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var cardImage: ImageView
+        var cardTitle: TextView
+        var cardInfo: TextView
+
+        init {
+            cardImage = itemView.findViewById(R.id.imageResource)
+            cardTitle = itemView.findViewById(R.id.titleResource)
+            cardInfo = itemView.findViewById(R.id.summaryResource)
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val _view: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.resources_card, parent, false)
+        return ViewHolder(_view)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.cardTitle.text = itemTitleArray[position]
+        holder.cardInfo.text = itemInfoArray[position]
+        holder.cardImage.setImageResource(itemImages[position])
+
+        var intent : Intent
+
+        holder.itemView.setOnClickListener { _view: View ->
+            when (position.toInt()) {
+                0 -> {
+
+
+                }
+                1->
+                {
+
+                }
+
+            }
+        }
+    }
+
+
+    override fun getItemCount(): Int {
+        return itemTitleArray.size
+    }
+
+
+}

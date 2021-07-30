@@ -1,6 +1,7 @@
 package com.example.mobilesappdev
 
 import android.app.Application
+import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
@@ -28,9 +29,19 @@ class App : Application() {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
         {
             var channel1 : NotificationChannel = NotificationChannel(
+
                 CHANNEL_ID_1, "Channel 1", NotificationManager.IMPORTANCE_HIGH
+
             )
             channel1.description = "This is Channel 1"
+            channel1.setShowBadge(true)
+            channel1.setAllowBubbles(true)
+            channel1.hasUserSetSound()
+            channel1.hasUserSetImportance()
+            channel1.importance = NotificationManager.IMPORTANCE_HIGH
+            channel1.lockscreenVisibility = Notification.VISIBILITY_PUBLIC
+            channel1.canBubble()
+            channel1.canShowBadge()
 
             var channel2 : NotificationChannel = NotificationChannel(
                 CHANNEL_ID_2, "Channel 2", NotificationManager.IMPORTANCE_DEFAULT

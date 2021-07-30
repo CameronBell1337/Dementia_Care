@@ -6,8 +6,9 @@ import android.app.TaskStackBuilder
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.res.Resources
 import android.graphics.BitmapFactory
+import android.graphics.Color
+import android.media.RingtoneManager
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.example.mobilesappdev.App
@@ -40,6 +41,7 @@ class NotificationReceiver : BroadcastReceiver() {
         }
 
 
+        val alarmsound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
         val taskStackBuilder : TaskStackBuilder = TaskStackBuilder.create(context)
         taskStackBuilder.addParentStack(MainActivity::class.java)
         taskStackBuilder.addNextIntent(intent1)
@@ -49,22 +51,30 @@ class NotificationReceiver : BroadcastReceiver() {
             PendingIntent.FLAG_UPDATE_CURRENT
         )
 
+        val bMap = BitmapFactory.decodeResource(context.resources, R.mipmap.ic_new_launcher)
 
-        val bMap = BitmapFactory.decodeResource(context.resources,R.drawable.ic_new_logo)
+        val notification = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            NotificationCompat.Builder(context, CHANNEL_ID_1)
+                .setLargeIcon(bMap)
+                .setContentTitle(intent?.getStringExtra("Title").toString())
+                .setContentText(intent?.getStringExtra("Message").toString()).setAutoCancel(true)
+                .setSmallIcon(R.drawable.notification_icon)
+                .setBadgeIconType(NotificationCompat.BADGE_ICON_LARGE)
+                .setContentIntent(pendingIntent2)
+                .setDefaults(NotificationCompat.DEFAULT_ALL)
+                .setSound(alarmsound)
+                .setColor(context.getColor(R.color.primaryColor))
+        } else {
+            NotificationCompat.Builder(context, CHANNEL_ID_1)
+                .setContentTitle(intent?.getStringExtra("Title").toString())
+                .setContentText(intent?.getStringExtra("Message").toString()).setAutoCancel(true)
+                .setSmallIcon(R.drawable.notification_icon)
+                .setContentIntent(pendingIntent2)
+                .setDefaults(NotificationCompat.DEFAULT_ALL)
+                .setSound(alarmsound)
+                .setColor(Color.RED)
+        }
 
-        val notification = NotificationCompat.Builder(context, CHANNEL_ID_1)
-            .setContentTitle(intent?.getStringExtra("Title").toString())
-            .setContentText(intent?.getStringExtra("Message").toString()).setAutoCancel(true)
-            .setSmallIcon(R.drawable.ic_baseline_calendar_today_24)
-            .setContentIntent(pendingIntent2)
-            .setChannelId(App.CHANNEL_ID_1)
-            .setDefaults(NotificationCompat.DEFAULT_VIBRATE)
-            .setDefaults(NotificationCompat.FLAG_BUBBLE)
-            .setDefaults(NotificationCompat.DEFAULT_LIGHTS )
-            .setDefaults(NotificationCompat.DEFAULT_SOUND)
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setDefaults(NotificationCompat.DEFAULT_VIBRATE)
-            .setCategory(NotificationCompat.CATEGORY_MESSAGE)
 
 
 
@@ -72,7 +82,11 @@ class NotificationReceiver : BroadcastReceiver() {
             notify(ID!!, notification.build())
         }.apply {
 
-            reminders = Reminders(intent?.getStringExtra("Title").toString(), intent?.getStringExtra("Message").toString(),Date(intent?.getStringExtra("RemindDate")))
+            reminders = Reminders(
+                intent?.getStringExtra("Title").toString(), intent?.getStringExtra(
+                    "Message"
+                ).toString(), Date(intent?.getStringExtra("RemindDate"))
+            )
 
 
             //val i: Int = 0

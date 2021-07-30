@@ -66,7 +66,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_goneMarginBottom="8dp"
-                    app:layout_goneMarginTop="64dp">
+                    app:layout_goneMarginTop="64dp"
+                    app:cardUseCompatPadding="true">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -83,7 +84,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Remove"
-                        android:layout_gravity="center">
+                        android:layout_gravity="center"
+                        android:textColor="?attr/colorOnSurface">
 
                     </Button>
 
@@ -106,7 +108,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cardView01"
                     app:layout_goneMarginBottom="8dp"
-                    app:layout_goneMarginTop="8dp">
+                    app:layout_goneMarginTop="8dp"
+                    app:cardUseCompatPadding="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -158,10 +161,11 @@
                         android:layout_height="wrap_content"
                         android:text="ADD"
                         android:src="?attr/colorPrimary"
-                        android:textColor="?attr/colorOnPrimary"
+                        android:textColor="?attr/colorOnSurface"
                         android:layout_gravity="right|bottom"
                         android:layout_margin="8dp"
-                        app:fabCustomSize="40dp"/>
+                        app:fabCustomSize="40dp"
+                        />
 
                 </com.google.android.material.card.MaterialCardView>
 
@@ -183,7 +187,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cardView02"
                     app:layout_goneMarginBottom="8dp"
-                    app:layout_goneMarginTop="8dp">
+                    app:layout_goneMarginTop="8dp"
+                    app:cardUseCompatPadding="true">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/_petitionView"
@@ -214,7 +219,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cardview03"
                     app:layout_goneMarginBottom="16dp"
-                    app:layout_goneMarginTop="8dp">
+                    app:layout_goneMarginTop="8dp"
+                    app:cardUseCompatPadding="true">
 
                     <ImageView
                         android:layout_width="80dp"
