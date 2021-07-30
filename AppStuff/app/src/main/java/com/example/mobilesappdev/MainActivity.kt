@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private var adapter2: RecyclerView.Adapter<RecyclerViewAdapter1.ViewHolder>? = null
 
 
-    //reminder setup
+    //reminder setup variables as static to be referenced from
     companion object {
         private lateinit var addsBtn: Button
         private lateinit var recyclerView3: RecyclerView
@@ -67,6 +67,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val sdf = SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy")
             val currentTime = System.currentTimeMillis()
 
+
+            //Loops thourgh all userList data and compares set time via current time to see if any has is older than current time
             val iterator = (0..userList!!.size).iterator()
             iterator.forEach {
                 for (i in 0 until userList!!.size) {
@@ -87,6 +89,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             cSetItemsInRecycler()
         }
 
+        //Changes the sub title with amount of reminders currently being set
         fun cSetItemsInRecycler() {
 
             if (userList!!.size > 0) {
@@ -109,25 +112,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         val text: TextView = findViewById(R.id.websiteLink)
         text.movementMethod = LinkMovementMethod.getInstance()
-        //appDatabase = AppDatabase.geAppdatabase(this)!!
-
-
-
-        //check()
-        //SavedData()
-        LoadData()
 
         setup()
-        reminderViewSetup()
-        setItemsInRecycler()
+
         text.movementMethod = LinkMovementMethod.getInstance()
+
 
         addsBtn.setOnClickListener { addReminder() }
         removeBtn.setOnClickListener { check()}
 
-
-
-
+        //kind dirty to being called every tick rather than on an action but only work around for now
         val iterator = (0..userList!!.size).iterator()
         iterator.forEach {
             check()
@@ -162,20 +156,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun setup() {
 
+        LoadData()
         recylerViewSetup()
         instFragment()
         themeChange()
         drawerLayoutSetup()
-
+        reminderViewSetup()
+        setItemsInRecycler()
 
     }
 
-    @JvmOverloads
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-
-        //LoadData()
-    }
 
     private fun reminderViewSetup() {
         val snapHelper1: SnapHelper = LinearSnapHelper()
@@ -210,6 +200,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
+    //Add button is pressed calling this fun to open Dialog box
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     private fun addReminder() {
         val inflater: LayoutInflater = LayoutInflater.from(this)
@@ -223,6 +214,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         selectBtn = v.findViewById(R.id.selectDateBtn)
         confirmBtn = v.findViewById(R.id.addEventButton)
 
+
+        //Opens another DialogAlert containing a Date and timer picker to specific time to set reminder at
         addDialog.setContentView(v)
         newCalender = Calendar.getInstance()
         selectBtn.setOnClickListener {
@@ -256,6 +249,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             dialog.show()
         }
 
+        //Confirms everything and pass through the data and saved the reminder
         confirmBtn.setOnClickListener {
 
             //val dialog = Dialog as DialogInterface
@@ -309,6 +303,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
+    //Loads data saved in shared preferences via a json parse
     fun LoadData() {
         val sharedPreferences: SharedPreferences = getSharedPreferences(
             "shared prefereces",
@@ -328,9 +323,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             userList = ArrayList()
         }
 
-        //check()
+        check()
     }
 
+    //Saves data to shared preferences via Json parse
     public fun SavedData() {
         val sharedPreferences: SharedPreferences = getSharedPreferences(
             "shared prefereces",
@@ -343,6 +339,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         editor.putString("reminder list", json)
         editor.apply()
     }
+
 
 
 
@@ -359,6 +356,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
+    //Set up app drawer
     private fun drawerLayoutSetup() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView = findViewById<NavigationView>(R.id.nav_view)
@@ -385,6 +383,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
+    //Sets all recylerViews and assigns specific layoutManagers and snap helpers
     private fun recylerViewSetup() {
         val snapHelper1: SnapHelper = LinearSnapHelper()
         val snapHelper2: SnapHelper = LinearSnapHelper()
@@ -406,6 +405,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
+    //Sets the animations for open and closing the drawMenu
     private fun drawAnimations() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val contentView: ScrollView = findViewById(R.id._contentView)
@@ -431,6 +431,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
+    //Rather than exit the application while the menu drawer is open just closes it if open = true
     override fun onBackPressed() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -441,6 +442,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
+    //Fragments currently not in use as of the moment
     private fun instFragment() {
         //val viewPager: ViewPager2 = findViewById(R.id._viewPager)
         val fragments: ArrayList<Fragment> = arrayListOf(
@@ -452,6 +454,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         //viewPager.adapter = adapter
     }
 
+    //Controls the night and dark theme and assigns it to the getpreferences Appearance
     private fun themeChange() {
 
 
@@ -481,6 +484,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
+    //Sets up interaction on the navigation drawer
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)

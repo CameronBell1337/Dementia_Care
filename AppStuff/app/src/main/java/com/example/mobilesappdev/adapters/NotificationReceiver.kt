@@ -19,10 +19,9 @@ import java.util.*
 
 class NotificationReceiver : BroadcastReceiver() {
 
-    private var noBoot : Boolean? = false
     lateinit var reminders : Reminders
 
-
+    //Sets static variables needed to reach from other classes
     companion object {
         lateinit var reminder : Reminders
         var main = MainActivity
@@ -33,19 +32,27 @@ class NotificationReceiver : BroadcastReceiver() {
     @JvmOverloads
     override fun onReceive(context: Context?, intent: Intent?) {
         var notificationManager : NotificationManager = context!!.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        /*Grabs the Unique ID for the current notification being scheduled and assigning each scheduled notification its own notificationCompat.builder
+        so you can have more than one notification without them being cancelled out via other notifications
+         */
         val ID = intent?.getStringExtra("NotifID")?.toInt()
 
 
+        //creates the local variable using the intent pass through from MainActivity
         val intent1 : Intent = Intent(context.applicationContext, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         }
 
 
         val alarmsound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
+
+        //Used for creating more than one type of notification
         val taskStackBuilder : TaskStackBuilder = TaskStackBuilder.create(context)
         taskStackBuilder.addParentStack(MainActivity::class.java)
         taskStackBuilder.addNextIntent(intent1)
 
+        //Gets the pending intent
         val pendingIntent2 : PendingIntent = taskStackBuilder.getPendingIntent(
             ID!!,
             PendingIntent.FLAG_UPDATE_CURRENT
@@ -53,6 +60,7 @@ class NotificationReceiver : BroadcastReceiver() {
 
         val bMap = BitmapFactory.decodeResource(context.resources, R.mipmap.ic_new_launcher)
 
+        //Builds the notification to be sent
         val notification = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             NotificationCompat.Builder(context, CHANNEL_ID_1)
                 .setLargeIcon(bMap)
@@ -62,7 +70,6 @@ class NotificationReceiver : BroadcastReceiver() {
                 .setBadgeIconType(NotificationCompat.BADGE_ICON_LARGE)
                 .setContentIntent(pendingIntent2)
                 .setDefaults(NotificationCompat.DEFAULT_ALL)
-                .setSound(alarmsound)
                 .setColor(context.getColor(R.color.primaryColor))
         } else {
             NotificationCompat.Builder(context, CHANNEL_ID_1)
@@ -71,17 +78,18 @@ class NotificationReceiver : BroadcastReceiver() {
                 .setSmallIcon(R.drawable.notification_icon)
                 .setContentIntent(pendingIntent2)
                 .setDefaults(NotificationCompat.DEFAULT_ALL)
-                .setSound(alarmsound)
                 .setColor(Color.RED)
         }
 
 
 
 
+        //Send the notification
         with(NotificationManagerCompat.from(context)){
             notify(ID!!, notification.build())
         }.apply {
 
+            //This is for functions which are to only be executed once the notification sends
             reminders = Reminders(
                 intent?.getStringExtra("Title").toString(), intent?.getStringExtra(
                     "Message"
@@ -89,6 +97,7 @@ class NotificationReceiver : BroadcastReceiver() {
             )
 
 
+            //Loops through all current userList array data and removes the Reminder() for each notification which has been sent
             //val i: Int = 0
             for (i in 0 until main.userList!!.size) {
                 if (main.userList!![i] == reminders) {
@@ -97,6 +106,7 @@ class NotificationReceiver : BroadcastReceiver() {
                 }
             }
 
+            //updates the UI and calls to change the Recycler view containing the card views to
             main.cCheck()
             main.reminderadapter3.notifyDataSetChanged()
         }

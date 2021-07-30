@@ -22,6 +22,8 @@ import com.example.mobilesappdev.fragments.*
 import kotlinx.android.synthetic.main.card_view.view.*
 import android.os.Handler
 
+
+//This is very dirty and hard coded and not reuseable due to into being statically set
 class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
     //Information came from: https://www.alzheimers.org.uk/

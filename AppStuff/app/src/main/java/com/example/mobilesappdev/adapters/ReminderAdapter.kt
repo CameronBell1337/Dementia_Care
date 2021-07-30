@@ -10,6 +10,7 @@ import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobilesappdev.R
 
+//The Schedule class for the Dynamic Recycler View
 class ReminderAdapter(val c: Context, val userList:List<Reminders>) :
     RecyclerView.Adapter<ReminderAdapter.MyViewHolder>() {
 
