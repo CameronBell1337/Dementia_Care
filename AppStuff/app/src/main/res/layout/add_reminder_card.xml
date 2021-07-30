@@ -39,7 +39,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:hint="Title"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:maxLength="20"/>
 
             <EditText
                 android:id="@+id/editMessage"
@@ -48,7 +49,7 @@
                 android:gravity="left"
                 android:hint="Message"
                 android:textSize="16dp"
-                />
+                android:maxLength="30"/>
 
             <TextView
                 android:id="@+id/date"
