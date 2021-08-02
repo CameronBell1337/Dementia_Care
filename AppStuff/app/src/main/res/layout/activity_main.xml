@@ -98,12 +98,13 @@
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center|top"
+                            android:layout_marginTop="8dp"
                             android:clickable="true"
                             android:elevation="6dp"
                             android:foreground="?selectableItemBackground"
-                            app:cardElevation="4dp">
+                            app:cardElevation="4dp"
+                            android:layout_marginBottom="1dp">
 
                             <ImageView
                                 android:layout_width="350dp"
@@ -232,7 +233,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
                             android:layout_marginLeft="20dp"
-                            android:text="Nothing Schdeduled"
+                            android:text="Try out one of these activities. Swipe left or right on a card"
                             android:textColor="@color/light_grey"
                             android:textSize="16dp"
                             android:textStyle="bold"
@@ -318,6 +319,19 @@
                             android:layout_marginRight="20dp"
                             android:text="@string/link_to_Site"
                             android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="20dp"
+                            android:text="Swipe left or right on a card to view another"
+                            android:textColor="@color/light_grey"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+
 
 
                         <androidx.recyclerview.widget.RecyclerView
