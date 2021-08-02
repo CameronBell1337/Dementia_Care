@@ -21,7 +21,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
@@ -30,8 +30,7 @@
             android:layout_height="170dp"
             android:elevation="20dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background"
-            />
+            android:src="@drawable/ic_launcher_background" />
 
 
         <TextView
@@ -49,7 +48,6 @@
 
 
         <TextView
-            android:textColor="?attr/colorOnSecondary"
             android:id="@+id/_cardInfoText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -58,10 +56,21 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:textSize="17dp"
             android:paddingBottom="5dp"
-            android:text="What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?" />
+            android:text="What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="17dp" />
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginRight="10dp"
+        android:text="Click to expand"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_gravity="bottom|right"/>
 
 </com.google.android.material.card.MaterialCardView>

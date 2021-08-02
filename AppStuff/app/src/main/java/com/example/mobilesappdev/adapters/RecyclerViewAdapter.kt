@@ -162,8 +162,8 @@ class RecyclerViewAdapter1 : RecyclerView.Adapter<RecyclerViewAdapter1.ViewHolde
     )
     private val itemInfoArray = arrayOf(
         "People with dementia are more likely to remember older memories. Reminiscence therapy uses prompts, like: photographs, familiar objects or music to help someone recall those memories",
-        "Following his mother's death, Jonathan is calling on Government to keep its promise and rebuild the social care system.",
-        "Meera’s grandmother has mixed dementia. Meera shares how the family cares for her grandma with the help of agency carers.",
+        "A dementia diagnosis can come as a shock to the person with the condition and people involved with them. Although, there is always a source of help around for everyone.",
+        "Exercise is an important part of life. Just taking a walk is essential for our physical and mental health and provides any benefits",
         "Actor Kate Dickie shares why she took part in our hard-hitting Cure The Care System film, and a message to other people affected by dementia.",
         "The support Julia's mum, Gladys, received was exceptional. Julia wants to help families not as lucky as her own to receive the same.",
     )

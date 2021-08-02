@@ -21,6 +21,7 @@
     <string name="nav_drawer_close">Close navigation drawer</string>
     <string name="nav_drawer_open">Open navigation drawer</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="about_string">Dementia Care is an app made for people and families who are caring for someone who has dementia. The app was created to try improve peoples caring experiences by offering valuable information to provide assistance with normal everyday jobs and tasks, while producing precious insights and addressing peoples concerns about carers well-being. </string>
 
     <!-- Preference Titles -->
     <string name="basics_header">Basics</string>
