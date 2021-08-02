@@ -8,9 +8,10 @@ import java.util.Date
 
 data class Reminders(
 
-    var Title: String,
-    var Summary: String,
-    //var RemindDate: Date
 
-
+   public var Title: String,
+   public var Summary: String,
+   public var RemindDate: Date
 )
+
+
