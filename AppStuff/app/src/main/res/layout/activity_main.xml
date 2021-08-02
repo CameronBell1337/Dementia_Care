@@ -51,7 +51,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardView01"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="72dp"
@@ -60,34 +60,58 @@
                     android:layout_marginBottom="8dp"
                     android:elevation="04dp"
                     app:cardElevation="04dp"
+                    app:cardUseCompatPadding="true"
                     app:layout_constraintBottom_toTopOf="@+id/cardView02"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_goneMarginBottom="8dp"
-                    app:layout_goneMarginTop="64dp"
-                    app:cardUseCompatPadding="true">
+                    app:layout_goneMarginTop="64dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="5dp"
-                        android:text="Weekly Summary"
-                        android:textColor="?attr/colorOnPrimary"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical"
+                        android:paddingBottom="32dp">
 
-                    <Button
-                        android:id="@+id/dataRemoveBtn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Remove"
-                        android:layout_gravity="center"
-                        android:textColor="?attr/colorOnSurface">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Weekly Summary"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
-                    </Button>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="You will have access to this once a week has passed"
+                            android:textColor="@color/light_grey"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true"
+                            android:elevation="6dp"
+                            android:foreground="?selectableItemBackground"
+                            app:cardElevation="4dp">
+
+                            <ImageView
+                                android:layout_width="350dp"
+                                android:layout_height="200dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/new_bar" />
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
 
                 </com.google.android.material.card.MaterialCardView>
 
@@ -103,20 +127,19 @@
                     android:layout_marginBottom="8dp"
                     android:elevation="04dp"
                     app:cardElevation="04dp"
+                    app:cardUseCompatPadding="true"
                     app:layout_constraintBottom_toTopOf="@+id/cardview03"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cardView01"
                     app:layout_goneMarginBottom="8dp"
-                    app:layout_goneMarginTop="8dp"
-                    app:cardUseCompatPadding="true">
+                    app:layout_goneMarginTop="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:paddingBottom="32dp"
-                        >
+                        android:paddingBottom="32dp">
 
 
                         <TextView
@@ -134,23 +157,22 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
+                            android:layout_marginLeft="20dp"
                             android:text="Nothing Schdeduled"
                             android:textColor="@color/light_grey"
                             android:textSize="16dp"
                             android:textStyle="bold"
-                            android:visibility="visible"
-                            android:layout_marginLeft="20dp"/>
+                            android:visibility="visible" />
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/_remindersView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_margin="8dp"
-                            android:visibility="visible"
                             android:fadingEdge="horizontal"
                             android:orientation="horizontal"
-                            android:layout_gravity="center"/>
-
+                            android:visibility="visible" />
 
 
                     </LinearLayout>
@@ -159,13 +181,12 @@
                         android:id="@+id/addFButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ADD"
-                        android:src="?attr/colorPrimary"
-                        android:textColor="?attr/colorOnSurface"
                         android:layout_gravity="right|bottom"
                         android:layout_margin="8dp"
-                        app:fabCustomSize="40dp"
-                        />
+                        android:src="?attr/colorPrimary"
+                        android:text="ADD"
+                        android:textColor="?attr/colorOnSurface"
+                        app:fabCustomSize="40dp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
@@ -182,22 +203,52 @@
                     android:layout_marginBottom="8dp"
                     android:elevation="04dp"
                     app:cardElevation="04dp"
+                    app:cardUseCompatPadding="true"
                     app:layout_constraintBottom_toTopOf="@+id/cardview04"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cardView02"
                     app:layout_goneMarginBottom="8dp"
-                    app:layout_goneMarginTop="8dp"
-                    app:cardUseCompatPadding="true">
+                    app:layout_goneMarginTop="8dp">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/_petitionView"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:fadingEdge="horizontal"
-                        android:fadingEdgeLength="2dp"
-                        android:orientation="vertical" />
+                        android:orientation="vertical"
+                        android:paddingBottom="32dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Activities"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="20dp"
+                            android:text="Nothing Schdeduled"
+                            android:textColor="@color/light_grey"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/_petitionView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:fadingEdge="horizontal"
+                            android:orientation="horizontal"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
 
 
                 </com.google.android.material.card.MaterialCardView>
@@ -214,13 +265,13 @@
                     android:layout_marginBottom="16dp"
                     android:elevation="04dp"
                     app:cardElevation="04dp"
+                    app:cardUseCompatPadding="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cardview03"
                     app:layout_goneMarginBottom="16dp"
-                    app:layout_goneMarginTop="8dp"
-                    app:cardUseCompatPadding="true">
+                    app:layout_goneMarginTop="8dp">
 
                     <ImageView
                         android:layout_width="80dp"

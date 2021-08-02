@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         private lateinit var confirmBtn: Button
         private lateinit var selectBtn: Button
         private lateinit var newCalender: Calendar
-        private lateinit var removeBtn: Button
+        //private lateinit var removeBtn: Button
         lateinit var noReminder : TextView
         var Ids : Int = 0
         var saveB : Boolean = false
@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
         addsBtn.setOnClickListener { addReminder() }
-        removeBtn.setOnClickListener { check()}
+        //removeBtn.setOnClickListener { check()}
 
         //kind dirty to being called every tick rather than on an action but only work around for now
         val iterator = (0..userList!!.size).iterator()
@@ -172,7 +172,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         noReminder = findViewById(R.id._noReminders)
         Ids = 0
         addsBtn = findViewById(R.id.addFButton)
-        removeBtn = findViewById(R.id.dataRemoveBtn)
+        //removeBtn = findViewById(R.id.dataRemoveBtn)
         reminderadapter3 = ReminderAdapter(this, userList!!)
         recyclerView3 = findViewById(R.id._remindersView)
         recyclerView3.layoutManager = LinearLayoutManager(
@@ -502,9 +502,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intent)
             }
             R.id._shareMenuItem -> {
-                intent = Intent(this, ShareActivity::class.java)
-                startActivity(intent)
-
+                //intent = Intent(this, ShareActivity::class.java)
+                //startActivity(intent)
+                Toast.makeText(this, "Currently Disabled", Toast.LENGTH_SHORT).show()
             }
             R.id._settingMenuItem -> {
                 intent = Intent(this, SettingsActivity::class.java)

@@ -4,7 +4,7 @@
 
     <!-- Menu -->
     <string name="setting_name">Settings</string>
-    <string name="help_name">Help &amp; Feedback</string>
+    <string name="help_name">About App</string>
     <string name="preferences">Preferences</string>
     <string name="home_name">Home</string>
     <string name="resources_name">Resources</string>
@@ -90,7 +90,7 @@
     <string name="Story03_4">Kate has been in many major films, stage plays and television programmes, including Game of Thrones, Tinsel Town, Red Road and Prometheus.</string>
     <string name="Story03_5">Kate kindly spoke with us about why she was eager to take part in the Cure The Care System film, and has a message for other people affected by dementia.</string>
     <string name="Story03_sh1">Watch the two-minute film, and read Kate’s personal story – continued below.</string>
-    <string name="Story03_sh2" >Kates story</string>
+    <string name="Story03_sh2">Kates story</string>
     <string name="Story03_sh3">Taking part in the Cure The Care System film</string>
     <string name="Story03_6">‘When this came up as a casting opportunity, my heart leapt. I really wanted to do it as I had first-hand experience of how difficult dementia can be. I understood the circumstances of the carer, the pain, and the grief. I wanted to do it as an ode to my mum and dad, who had been in a similar situation.</string>
     <string name="Story03_7">‘Ahead of filming, I began to feel a little apprehensive. It started to bring back memories I’d put away for a long time. But on the day, we were making the best film we could for Alzheimer’s Society. I didn’t feel like I was carrying in too much grief for my mum.</string>

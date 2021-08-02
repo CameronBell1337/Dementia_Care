@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mobilesappdev">
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
     <application
         android:name=".App"
@@ -13,19 +13,28 @@
         android:roundIcon="@mipmap/ic_new_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobilesAppDev">
-        <activity android:name=".fragments.Story06"
+        <activity android:name=".fragments.Resource01"></activity>
+        <activity android:name=".fragments.Resource00" />
+        <activity
+            android:name=".fragments.Story06"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".fragments.Story05"
+        <activity
+            android:name=".fragments.Story05"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".fragments.Story04"
+        <activity
+            android:name=".fragments.Story04"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".fragments.Story03"
+        <activity
+            android:name=".fragments.Story03"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".fragments.Story00"
+        <activity
+            android:name=".fragments.Story00"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".fragments.Story02"
+        <activity
+            android:name=".fragments.Story02"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".fragments.Story01"
+        <activity
+            android:name=".fragments.Story01"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".FeedbackActivity"
@@ -46,7 +55,6 @@
         <activity
             android:name=".ResourceActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,10 +65,10 @@
 
         <receiver android:name=".adapters.NotificationReceiver">
             <intent-filter>
-                //<action android:name="android.intent.action.BOOT_COMPLETED" />
+                //
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-
     </application>
 
 </manifest>

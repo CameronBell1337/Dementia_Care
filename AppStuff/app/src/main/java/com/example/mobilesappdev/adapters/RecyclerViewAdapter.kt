@@ -249,7 +249,7 @@ class RecyclerViewAdapter2 : RecyclerView.Adapter<RecyclerViewAdapter2.ViewHolde
     )
     private val itemImages = intArrayOf(
         R.drawable.bain_v2,
-        R.drawable.ic_new_logo,
+        R.drawable.brain_v3,
         R.drawable.living_with_dementia_v2,
         R.drawable.self_care_v2,
         R.drawable.book_v2,
@@ -283,18 +283,55 @@ class RecyclerViewAdapter2 : RecyclerView.Adapter<RecyclerViewAdapter2.ViewHolde
 
         var intent : Intent
 
-        holder.itemView.setOnClickListener { _view: View ->
-            when (position.toInt()) {
-                0 -> {
+        var options : ActivityOptionsCompat
+        var image = holder.cardImage
 
+        val handler = Handler()
+
+        holder.itemView.setOnClickListener { _view: View ->
+            when (position) {
+                0 -> {
+                    intent = Intent(_view.context,Resource00::class.java)
+                    options = ActivityOptionsCompat.makeSceneTransitionAnimation(_view.context as Activity, image, "card_transition")
+
+                    _view.context.startActivity(intent, options.toBundle())
 
                 }
                 1->
                 {
+                    intent = Intent(_view.context,Resource01::class.java)
+                    options = ActivityOptionsCompat.makeSceneTransitionAnimation(_view.context as Activity, image, "card_transition")
+
+                    _view.context.startActivity(intent, options.toBundle())
 
                 }
+                2->
+                {
+                    Toast.makeText(_view.context, "Currently Disabled", Toast.LENGTH_SHORT).show()
+                }
+                3->
+                {
+                    Toast.makeText(_view.context, "Currently Disabled", Toast.LENGTH_SHORT).show()
+                }
+                4->
+                {
+                    Toast.makeText(_view.context, "Currently Disabled", Toast.LENGTH_SHORT).show()
+                }
+                5->
+                {
+                    Toast.makeText(_view.context, "Currently Disabled", Toast.LENGTH_SHORT).show()
+                }
+                6->
+                {
+                    Toast.makeText(_view.context, "Currently Disabled", Toast.LENGTH_SHORT).show()
+                }
+                else -> return@setOnClickListener
 
             }
+
+            handler.postDelayed({
+                holder.itemView.visibility = View.VISIBLE
+            }, 1000)
         }
     }
 
