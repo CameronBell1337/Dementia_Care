@@ -164,8 +164,8 @@ class RecyclerViewAdapter1 : RecyclerView.Adapter<RecyclerViewAdapter1.ViewHolde
         "People with dementia are more likely to remember older memories. Reminiscence therapy uses prompts, like: photographs, familiar objects or music to help someone recall those memories",
         "A dementia diagnosis can come as a shock to the person with the condition and people involved with them. Although, there is always a source of help around for everyone.",
         "Exercise is an important part of life. Just taking a walk is essential for our physical and mental health and provides any benefits",
-        "Actor Kate Dickie shares why she took part in our hard-hitting Cure The Care System film, and a message to other people affected by dementia.",
-        "The support Julia's mum, Gladys, received was exceptional. Julia wants to help families not as lucky as her own to receive the same.",
+        "Cooking & Baking are events and activities you and others can enjoy together. Whilst some people with dementia can follow a recipe, it is still a great thing to enjoy with others and to get involved in.",
+        "Playing word games are fun and a good activity to involve others. It also helps benefit in word recalling and helps with cognitive stimulation",
     )
     private val itemImages = intArrayOf(
         R.drawable.remember_past,

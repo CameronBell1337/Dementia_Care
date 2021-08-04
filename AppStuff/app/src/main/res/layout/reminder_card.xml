@@ -37,7 +37,7 @@
                 android:layout_gravity="top|left"
                 android:paddingLeft="105dp"
                 android:text="Test"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -48,7 +48,7 @@
                 android:paddingLeft="105dp"
                 android:paddingTop="10dp"
                 android:text="This is a test reminder"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/dateTime"
@@ -58,7 +58,7 @@
                 android:paddingLeft="105dp"
                 android:paddingTop="10dp"
                 android:text="Date"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
 
         </LinearLayout>

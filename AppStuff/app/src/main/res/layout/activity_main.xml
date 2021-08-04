@@ -82,7 +82,7 @@
                             android:layout_marginTop="5dp"
                             android:text="Weekly Summary"
                             android:textColor="?attr/colorOnPrimary"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -90,7 +90,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:text="You will have access to this once a week has passed"
-                            android:textColor="@color/light_grey"
+                            android:textColor="?attr/colorOnSecondary"
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:visibility="visible" />
@@ -150,7 +150,7 @@
                             android:layout_marginTop="10dp"
                             android:text="Schedule"
                             android:textColor="?attr/colorOnPrimary"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -160,8 +160,8 @@
                             android:layout_gravity="top"
                             android:layout_marginLeft="20dp"
                             android:text="Nothing Schdeduled"
-                            android:textColor="@color/light_grey"
-                            android:textSize="16dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:visibility="visible" />
 
@@ -225,7 +225,7 @@
                             android:layout_marginTop="10dp"
                             android:text="Activities"
                             android:textColor="?attr/colorOnPrimary"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -234,8 +234,8 @@
                             android:layout_gravity="top"
                             android:layout_marginLeft="20dp"
                             android:text="Try out one of these activities. Swipe left or right on a card"
-                            android:textColor="@color/light_grey"
-                            android:textSize="16dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:visibility="visible" />
 
@@ -298,7 +298,7 @@
                             android:layout_marginTop="10dp"
                             android:text="Their Stories"
                             android:textColor="?attr/colorOnPrimary"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -308,7 +308,7 @@
                             android:layout_marginTop="25dp"
                             android:layout_marginRight="20dp"
                             android:text="Read about people's experiences with dementia. find more from:"
-                            android:textSize="18dp" />
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/websiteLink"
@@ -318,7 +318,7 @@
                             android:layout_marginTop="1dp"
                             android:layout_marginRight="20dp"
                             android:text="@string/link_to_Site"
-                            android:textSize="18dp" />
+                            android:textSize="18sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -326,8 +326,8 @@
                             android:layout_gravity="top"
                             android:layout_marginLeft="20dp"
                             android:text="Swipe left or right on a card to view another"
-                            android:textColor="@color/light_grey"
-                            android:textSize="16dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:visibility="visible" />
 

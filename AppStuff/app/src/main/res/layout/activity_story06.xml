@@ -65,7 +65,7 @@
                         android:layout_marginLeft="10dp"
                         android:text="Juggling work, home-schooling, and full-time dementia care with an unfair system"
                         android:textColor="?attr/colorOnPrimary"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -75,7 +75,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_1"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_2"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_3"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -102,7 +102,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_sh1"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -112,7 +112,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_4"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_sh2"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -139,7 +139,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_5"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -148,7 +148,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_6"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -157,7 +157,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_7"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -166,7 +166,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_8"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -175,7 +175,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_9"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -184,7 +184,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_10"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -194,7 +194,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_11"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -203,7 +203,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_12"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -212,7 +212,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_sh3"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -222,7 +222,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_13"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -231,7 +231,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_13"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -240,7 +240,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_14"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -257,7 +257,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_15"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -266,7 +266,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_16"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -274,7 +274,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_17"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -283,7 +283,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story06_18"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
         </LinearLayout>

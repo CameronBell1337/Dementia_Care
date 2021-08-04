@@ -62,7 +62,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="'The system isn’t set up to be fair' - Derek's struggle for dementia support"
+                        android:text="Why dementia research matters"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="?attr/colorOnPrimary"/>

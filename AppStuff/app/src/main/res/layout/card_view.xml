@@ -43,7 +43,7 @@
             android:layout_marginRight="10dp"
             android:text="Sample Title Text"
             android:textColor="?attr/colorOnPrimary"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
 
@@ -59,7 +59,7 @@
             android:paddingBottom="5dp"
             android:text="What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?"
             android:textColor="?attr/colorOnSecondary"
-            android:textSize="17dp" />
+            android:textSize="17sp" />
     </LinearLayout>
 
     <TextView

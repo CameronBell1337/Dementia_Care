@@ -66,7 +66,7 @@
                         android:layout_marginLeft="10dp"
                         android:text="‘I wanted to look after Mum, but spent years wrangling with an unfair system’ - Jonathan's story"
                         android:textColor="?attr/colorOnPrimary"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -76,7 +76,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_1"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -85,7 +85,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_2"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -94,7 +94,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_3"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -103,7 +103,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_4"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
 
                     <TextView
@@ -113,7 +113,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_sh1"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="16dp"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -123,7 +123,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_5"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -132,7 +132,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_6"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -149,7 +149,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_7"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -158,7 +158,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_8"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -167,7 +167,7 @@
                         android:layout_marginBottom="5dp"
                         android:text="@string/Story01_9"
                         android:textColor="?attr/colorOnSecondary"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <ImageView
                         android:layout_width="match_parent"
